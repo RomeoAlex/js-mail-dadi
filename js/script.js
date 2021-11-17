@@ -3,11 +3,18 @@ console.log(userMail);
 
 const emails = ['kenzo@kenzo.com','google@google.com','yahoo@yahoo.com'];
 
+let grantAccess = false;
 for( let i = 0; i < emails.length; i++ ) {
-    if( userMail === emails[i]){
-        console.log("puoi accedere")
-        alert("puoi accedere");
-    } else{
-        alert("Accesso Negato");
+
+    const thisEmail = emails[i];
+
+    if( userMail === thisEmail ){
+        grantAccess = true;
+        
     }
+}
+if(grantAccess){
+    alert("puoi accedere");
+}else{
+    alert("Accesso negato");
 }
